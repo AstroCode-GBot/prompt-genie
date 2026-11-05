@@ -1,0 +1,9 @@
+{
+  "name": "Prompt Genie Studio",
+  "short_name": "Prompt Genie",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090b18",
+  "theme_color": "#090b18",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

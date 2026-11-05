@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#090b18" />
+  <meta name="description" content="Turn simple ideas and images into clear, powerful AI prompts with Prompt Genie." />
+  <title>Prompt Genie — Make every idea prompt-perfect</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="/" aria-label="Prompt Genie home">
+        <span class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3.5 23.8 15l11.7 5-11.7 4.8L20 36.5l-4.8-11.7L3.5 20l11.7-5L20 3.5Z"/><path d="m31.5 3 .9 3.1 3.1.9-3.1.9-.9 3.1-.9-3.1-3.1-.9 3.1-.9.9-3.1Z"/></svg></span>
+        <span class="brand-name">prompt<span>genie</span></span>
+      </a>
+
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="side-nav">
+        <button class="nav-item active" type="button" data-nav="workspace"><span class="nav-icon" data-icon="sparkles"></span><span>Prompt studio</span><span class="nav-active-dot"></span></button>
+        <button class="nav-item" type="button" data-nav="history"><span class="nav-icon" data-icon="history"></span><span>Recent prompts</span></button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-tip">
+          <div class="tip-icon"><span data-icon="lightbulb"></span></div>
+          <p class="tip-title">A little tip</p>
+          <p class="tip-copy">Specific details make stronger prompts. Mention the subject, style, mood and setting.</p>
+        </div>
+        <div class="sidebar-footer"><span class="status-dot"></span> All systems ready <span class="version">v1.0</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="workspace">
+      <header class="topbar">
+        <div class="mobile-brand brand">
+          <span class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3.5 23.8 15l11.7 5-11.7 4.8L20 36.5l-4.8-11.7L3.5 20l11.7-5L20 3.5Z"/><path d="m31.5 3 .9 3.1 3.1.9-3.1.9-.9 3.1-.9-3.1-3.1-.9 3.1-.9.9-3.1Z"/></svg></span>
+          <span class="brand-name">prompt<span>genie</span></span>
+        </div>
+        <div class="breadcrumbs"><span>Workspace</span><span class="crumb-slash">/</span><strong>Prompt studio</strong></div>
+        <div class="topbar-right">
+          <span class="secure-label"><span data-icon="shield-check"></span> Private &amp; secure</span>
+          <button class="icon-button mobile-menu" id="mobileMenu" type="button" aria-label="Toggle navigation" aria-expanded="false"><span data-icon="menu"></span></button>
+          <div class="avatar" aria-label="Prompt Genie">PG</div>
+        </div>
+      </header>
+
+      <section class="hero-section">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-sparkle" data-icon="sparkles"></span> YOUR CREATIVE SIDEKICK</div>
+          <h1>Make every idea<br /><span class="gradient-text">prompt-perfect.</span></h1>
+          <p class="hero-subtitle">Turn simple thoughts and images into clear, powerful prompts. Less guesswork, more great results.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div>
+          <div class="art-glow"></div>
+          <div class="art-card art-card-back"><span class="mini-line"></span><span class="mini-line short"></span><span class="mini-line"></span></div>
+          <div class="art-card art-card-front"><div class="art-card-top"><span class="art-dot"></span><span class="art-dot"></span><span class="art-dot"></span></div><div class="art-spark" data-icon="sparkles"></div><div class="art-line one"></div><div class="art-line two"></div><div class="art-line three"></div><div class="art-pill"></div></div>
+          <span class="floating-star star-one">✦</span><span class="floating-star star-two">✧</span><span class="floating-star star-three">✦</span>
+        </div>
+      </section>
+
+      <section class="studio-grid" aria-label="Prompt generator">
+        <div class="work-panel panel">
+          <div class="panel-heading">
+            <div><div class="section-kicker">PROMPT GENERATOR</div><h2>Choose your starting point</h2><p class="section-subtitle">Pick a method and let the magic happen.</p></div>
+            <div class="step-indicator"><span class="step-number">01</span><span class="step-line"></span><span class="step-label">INPUT</span></div>
+          </div>
+
+          <div class="mode-tabs" role="tablist" aria-label="Input type">
+            <button class="mode-tab active" id="tab-text" type="button" role="tab" aria-selected="true" aria-controls="panel-text" data-mode="text"><span data-icon="type"></span><span>Text to prompt</span></button>
+            <button class="mode-tab" id="tab-url" type="button" role="tab" aria-selected="false" aria-controls="panel-url" data-mode="url"><span data-icon="link"></span><span>Image URL</span></button>
+            <button class="mode-tab" id="tab-upload" type="button" role="tab" aria-selected="false" aria-controls="panel-upload" data-mode="upload"><span data-icon="image-plus"></span><span>Upload image</span></button>
+          </div>
+
+          <form id="textForm" class="mode-panel active" data-panel="text" role="tabpanel" aria-labelledby="tab-text" novalidate>
+            <div class="field-heading"><label for="ideaInput">What's your idea?</label><span class="optional-label">BE DESCRIPTIVE</span></div>
+            <div class="textarea-wrap">
+              <textarea id="ideaInput" maxlength="10000" rows="5" placeholder="e.g. A cozy little cabin in the woods during a magical snowfall..." spellcheck="true"></textarea>
+              <div class="textarea-bottom"><span class="field-hint"><span data-icon="sparkles"></span> Don't overthink it. Just describe your idea.</span><span class="char-count" id="charCount">0 / 10,000</span></div>
+            </div>
+            <div class="examples-row"><span class="examples-label">TRY AN IDEA</span><button class="example-chip" type="button" data-example="A futuristic city floating above the clouds at golden hour"> <span>🏙️</span> Dream city</button><button class="example-chip" type="button" data-example="A tiny orange cat wearing a knitted scarf, sitting in a cozy bookshop"> <span>🐈</span> Cute character</button><button class="example-chip" type="button" data-example="A premium glass perfume bottle on a reflective surface, dramatic studio lighting"> <span>💎</span> Product shot</button></div>
+            <button class="primary-button generate-button" type="submit"><span data-icon="sparkles"></span><span class="button-label">Generate prompt</span><span class="button-arrow" data-icon="arrow-right"></span></button>
+          </form>
+
+          <form id="urlForm" class="mode-panel" data-panel="url" role="tabpanel" aria-labelledby="tab-url" novalidate hidden>
+            <div class="field-heading"><label for="imageUrlInput">Paste an image link</label><span class="optional-label">PUBLIC IMAGE URL</span></div>
+            <div class="url-input-wrap"><span data-icon="image"></span><input id="imageUrlInput" type="url" inputmode="url" autocomplete="url" placeholder="https://example.com/your-image.jpg" maxlength="2048" /><button class="clear-input" type="button" id="clearUrl" aria-label="Clear image URL" hidden><span data-icon="x"></span></button></div>
+            <p class="field-help">Use a direct, publicly accessible image link that starts with https:// or http://.</p>
+            <div class="url-preview" id="urlPreview" hidden><img id="urlPreviewImage" alt="Image link preview" /><div class="url-preview-meta"><span class="preview-check" data-icon="check-circle-2"></span><div><strong>Image link added</strong><span id="urlPreviewHost"></span></div></div></div>
+            <div class="info-note"><span data-icon="info"></span><span>The image must be reachable without signing in. Some websites block direct image access.</span></div>
+            <button class="primary-button generate-button" type="submit"><span data-icon="sparkles"></span><span class="button-label">Analyze image URL</span><span class="button-arrow" data-icon="arrow-right"></span></button>
+          </form>
+
+          <form id="uploadForm" class="mode-panel" data-panel="upload" role="tabpanel" aria-labelledby="tab-upload" novalidate hidden>
+            <div class="field-heading"><label for="fileInput">Add your image</label><span class="optional-label">MAX 4 MB</span></div>
+            <input id="fileInput" type="file" accept="image/png,image/jpeg,image/webp,image/gif" hidden />
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose an image or drop it here">
+              <div class="dropzone-icon"><span data-icon="cloud-upload"></span></div>
+              <strong>Drop your image here</strong><span class="dropzone-sub">or <button class="browse-link" id="browseFile" type="button">browse files</button> from your device</span>
+              <span class="file-types">PNG, JPG, WEBP or GIF · Up to 4 MB</span>
+            </div>
+            <div class="file-preview" id="filePreview" hidden><img id="filePreviewImage" alt="Selected image preview" /><div class="file-preview-info"><strong id="fileName"></strong><span id="fileSize"></span></div><button type="button" class="remove-file" id="removeFile" aria-label="Remove selected image"><span data-icon="x"></span></button></div>
+            <div class="field-heading instruction-heading"><label for="imageInstruction">What should the prompt focus on?</label><span class="optional-label">OPTIONAL</span></div>
+            <textarea id="imageInstruction" class="instruction-input" rows="2" maxlength="1000" placeholder="Generate a same image like this"></textarea>
+            <button class="primary-button generate-button" type="submit"><span data-icon="sparkles"></span><span class="button-label">Analyze uploaded image</span><span class="button-arrow" data-icon="arrow-right"></span></button>
+          </form>
+          <div class="panel-footnote"><span data-icon="lock"></span> Your images are sent securely for analysis and aren't stored in this website.</div>
+        </div>
+
+        <aside class="side-column">
+          <div class="result-panel panel" id="resultPanel" aria-live="polite">
+            <div class="result-heading"><div><div class="section-kicker">YOUR RESULT</div><h2>Generated prompt</h2></div><span class="result-status" id="resultStatus"><span class="status-dot"></span> READY</span></div>
+            <div class="result-empty" id="resultEmpty"><div class="empty-art"><div class="empty-orbit"></div><div class="empty-doc"><div class="doc-spark" data-icon="sparkles"></div><i></i><i></i><i class="small"></i></div></div><strong>Your next great prompt starts here</strong><p>Give us an idea or an image. Your polished prompt will show up right here.</p><div class="empty-shortcuts"><span><kbd>01</kbd> Add input</span><span class="shortcut-arrow">→</span><span><kbd>02</kbd> Generate</span></div></div>
+            <div class="loading-state" id="loadingState" hidden><div class="loading-orb"><span data-icon="sparkles"></span></div><strong id="loadingTitle">Working on your prompt</strong><p id="loadingCopy">Our genie is turning your idea into something special.</p><div class="loading-track"><span></span></div><span class="loading-note">This can take a few moments</span><button type="button" class="cancel-button" id="cancelRequest">Cancel request</button></div>
+            <div class="error-state" id="errorState" hidden><div class="error-icon"><span data-icon="alert-triangle"></span></div><strong id="errorTitle">Something didn't work</strong><p id="errorMessage">We couldn't generate your prompt. Please try again.</p><div class="error-actions"><button class="secondary-button" id="retryButton" type="button"><span data-icon="refresh-cw"></span> Try again</button><button class="text-button" id="errorDetailsButton" type="button">Details</button></div><pre class="error-details" id="errorDetails" hidden></pre></div>
+            <div class="result-content" id="resultContent" hidden>
+              <div class="result-meta"><span class="result-type"><span data-icon="check-circle-2"></span> GENERATED</span><span id="resultTime"></span></div>
+              <div class="prompt-output" id="promptOutput" tabindex="0"></div>
+              <div class="result-actions"><button class="primary-button copy-button" id="copyButton" type="button"><span data-icon="copy"></span><span id="copyLabel">Copy prompt</span></button><button class="secondary-button download-button" id="downloadButton" type="button"><span data-icon="download"></span> Save .txt</button></div>
+              <p class="result-disclaimer"><span data-icon="info"></span> Review the generated prompt and adjust any details to match your vision.</p>
+            </div>
+          </div>
+          <div class="mini-feature-card"><div class="feature-icon"><span data-icon="wand-sparkles"></span></div><div><strong>Better prompts. Better results.</strong><p>Clear, detailed prompts help your AI tools understand exactly what you have in mind.</p></div><span class="feature-spark">✦</span></div>
+        </aside>
+      </section>
+
+      <section class="history-section panel" id="historySection">
+        <div class="history-heading"><div><div class="section-kicker">YOUR WORK</div><h2>Recent prompts</h2><p class="section-subtitle">Your latest results, saved on this device.</p></div><button type="button" class="text-button clear-history" id="clearHistory" hidden><span data-icon="trash-2"></span> Clear history</button></div>
+        <div class="history-list" id="historyList"><div class="history-empty"><span data-icon="clock-3"></span><span>Your generated prompts will appear here.</span></div></div>
+      </section>
+
+      <footer class="page-footer"><span>© <span id="year"></span> Prompt Genie</span><span>Made for curious minds <span class="footer-heart">♥</span></span><a href="https://prompt-genie-five.vercel.app" target="_blank" rel="noreferrer">Powered by Prompt Genie API <span data-icon="external-link"></span></a></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"><span class="toast-icon" data-icon="check"></span><span id="toastText">Copied to clipboard</span></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
