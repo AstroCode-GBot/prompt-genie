@@ -1,0 +1,12 @@
+{
+  "name": "prompt-genie-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A polished, responsive Prompt Genie web app with Vercel API proxy routes.",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "engines": { "node": ">=20" },
+  "devDependencies": { "vercel": "^48.0.0" }
+}
